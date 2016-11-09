@@ -26,6 +26,14 @@
             android:label="Sign Up">
 
         </activity>
+
+        <activity
+            android:name=".Events.EventInfoDisplayPageActivity"
+            android:label="Event Info Display"/>
+        <activity
+            android:name=".Events.EventInfoEditPageActivity"
+            android:label="Event Info Display"/>
+
     </application>
 
 </manifest>
