@@ -18,13 +18,14 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical" >
+            android:orientation="vertical"
+            android:weightSum="1">
 
             <TextView
                 android:text="@string/event_title_string"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/textView17"
+                android:id="@+id/eventTitleLabel"
                 android:allowUndo="false"
                 android:textSize="18sp" />
 
@@ -34,32 +35,34 @@
                 android:inputType="textPersonName"
                 android:text="@string/edit_title_default_string"
                 android:ems="10"
-                android:id="@+id/editText6" />
+                android:id="@+id/EventTitleEditText" />
 
             <TextView
                 android:text="@string/dateString"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/textView18"
+                android:id="@+id/datePickerLabel"
                 android:textSize="18sp" />
 
-            <DatePicker
+            <EditText
                 android:layout_width="match_parent"
-                android:layout_height="177dp"
-                android:id="@+id/datePicker"
-                tools:datePickerMode="calendar" />
+                android:layout_height="wrap_content"
+                android:inputType="date"
+                android:ems="10"
+                android:id="@+id/dateEditText" />
 
             <TextView
                 android:text="@string/start_time_string"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/textView14"
+                android:id="@+id/startTimePickerLabel"
                 android:textSize="18sp" />
 
-            <TimePicker
+            <Button
+                android:text="Button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/timePicker" />
+                android:id="@+id/saveEditButton" />
         </LinearLayout>
     </ScrollView>
 
