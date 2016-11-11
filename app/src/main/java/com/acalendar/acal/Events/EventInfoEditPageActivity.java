@@ -30,7 +30,6 @@ public class EventInfoEditPageActivity  extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.event_info_edit_page);
-        // set up the date picker
         javaCalendar = Calendar.getInstance();
         year = javaCalendar.get(Calendar.YEAR);
         month = javaCalendar.get(Calendar.MONTH);
@@ -40,6 +39,7 @@ public class EventInfoEditPageActivity  extends Activity {
             @Override
             public void onDateSet(DatePicker view, int year, int monthOfYear,
                                   int dayOfMonth) {
+                // TODO Auto-generated method stub
                 javaCalendar.set(Calendar.YEAR, year);
                 javaCalendar.set(Calendar.MONTH, monthOfYear);
                 javaCalendar.set(Calendar.DAY_OF_MONTH, dayOfMonth);
@@ -50,12 +50,15 @@ public class EventInfoEditPageActivity  extends Activity {
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        new DatePickerDialog(EventInfoEditPageActivity.this,
+                        new DatePickerDialog(EventInfoEditPageActivity.class,
                                 datePickerListener, year, month, day
                                 ).show();
                     }
                 }
         );
+
+
+
 
         // TODO: if any get and display bundle data from previous activity
 
