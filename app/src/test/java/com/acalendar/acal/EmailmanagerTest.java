@@ -9,11 +9,11 @@ public class EmailmanagerTest {
 
     private ErrorManager email;
 
-    @Test(expected = IllegalArgumentException.class)
+    @Test
     public void TestSendMess() {
     }
 
-    @Test(expected = IllegalArgumentException.class)
+    @Test
     public void onBind() {
     }
 }
