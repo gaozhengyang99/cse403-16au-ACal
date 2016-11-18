@@ -20,6 +20,9 @@ public class LoginActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login);
 
+
+
+
         buttonSetUP();
     }
 
@@ -79,6 +82,7 @@ public class LoginActivity extends Activity {
                     Toast missmatch = Toast.makeText(LoginActivity.this, "Invalid username/password", Toast.LENGTH_SHORT);
                     missmatch.show();
                 }
+
             }
         });
     }
