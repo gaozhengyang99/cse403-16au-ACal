@@ -49,7 +49,7 @@ public class NewEventActivity extends Activity {
 
 
         ArrayList<Invitation> invitationsList = new ArrayList<>();
-        LoginedAccount.getEventsManager().refreshAllAcceptedEvents();
+//        LoginedAccount.getEventsManager().refreshAllAcceptedEvents();
         invitationsList.addAll(LoginedAccount.getNotificationManager().pendingEvents);
 
         invitationsList.add(new Invitation("Doctor Strange", "Tong Shen", "10/10/2016", "Northgate", "", false));
