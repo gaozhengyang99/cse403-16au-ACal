@@ -91,7 +91,7 @@ public class NewEventActivity extends Activity {
                         joinEventQuery.put("userId", LoginedAccount.getUserId());
                         joinEventQuery.put("eventId", invitation.getEventId());
                         Map<String, Object> apiResponse = ApiResource.submitRequest(joinEventQuery, null, ApiResource.GET_REQUEST, ApiResource.REQUEST_JOIN_EVENT);
-                        if (apiResponse.get("result") != null && (boolean)apiResponse.get("result")) {
+                        if (apiResponse.get("success") != null && (boolean)apiResponse.get("success")) {
                             Log.v("Test", "joined event" + invitation.getTitle());
                             //TODO: remove friend from list
                             responseText.append(invitation.getTitle() + "\n");
@@ -133,7 +133,7 @@ public class NewEventActivity extends Activity {
                         declineEventQuery.put("userId", LoginedAccount.getUserId());
                         declineEventQuery.put("eventId", invitation.getEventId());
                         Map<String, Object> apiResponse = ApiResource.submitRequest(declineEventQuery, null, ApiResource.GET_REQUEST, ApiResource.REQUEST_DECLINE_EVENT);
-                        if (apiResponse.get("result") != null && (boolean)apiResponse.get("result")) {
+                        if (apiResponse.get("success") != null && (boolean)apiResponse.get("success")) {
                             Log.v("Test", "declined event" + invitation.getTitle());
                             //TODO: remove friend from list
                             responseText.append(invitation.getTitle() + "\n");
